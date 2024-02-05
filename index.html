@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL to JavaScript Code</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #4caf50;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL to JavaScript Code</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #4caf50;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 70%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #outputBox {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            white-space: pre-line;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>URL to JavaScript Code</h1>
+        <p>This site creates a user-friendly webpage where users can input a URL. Click "Generate JavaScript Code" to convert the URL into JavaScript code that sets <code>window.location.href</code>. Open the generated URL in a new tab or copy the JavaScript code to the clipboard without the "Generated JavaScript Code:" prefix.</p>
+
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" id="urlInput" placeholder="https://example.com">
+
+        <button onclick="generateJavaScriptCode()">Generate JavaScript Code</button>
+        <button onclick="openGeneratedURL()">Open URL</button>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        
+        <p>Generated JavaScript Code:</p>
+        <div id="outputBox"></div>
+    </div>
+
+    <script>
+        function generateJavaScriptCode() {
+            var urlInputValue = document.getElementById('urlInput').value;
+            var charCodes = Array.from(urlInputValue).map(char => char.charCodeAt(0));
+            var jsCode = "window.location.href = String.fromCharCode(" + charCodes.join(', ') + ");";
+            document.getElementById('outputBox').textContent = jsCode;
+        }
+
+        function openGeneratedURL() {
+            var urlInputValue = document.getElementById('urlInput').value;
+            var charCodes = Array.from(urlInputValue).map(char => char.charCodeAt(0));
+            var generatedURL = String.fromCharCode(...charCodes);
+            window.open(generatedURL, '_blank');
+        }
+
+        function copyToClipboard() {
+            var outputBox = document.getElementById('outputBox');
+            var textArea = document.createElement('textarea');
+            textArea.value = outputBox.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Code copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
+￼Enter            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 70%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #outputBox {
+            margin-top: 20px;
+      padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            white-space: pre-line;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>URL to JavaScript Code</h1>
+        <p>This site creates a user-friendly webpage where users can input a URL. Click "Generate JavaScript Code" to convert the URL into JavaScript code that sets <code>window.location.href</code>. Open the generated URL in a new tab or copy the JavaScript code to the clipboard without the "Generated JavaScript Code:" prefix.</p>
+
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" id="urlInput" placeholder="https://example.com">
+
+        <button onclick="generateJavaScriptCode()">Generate JavaScript Code</button>
+        <button onclick="openGeneratedURL()">Open URL</button>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        
+        <p>Generated JavaScript Code:</p>
+        <div id="outputBox"></div>
+    </div>
+
+    <script>
+        function generateJavaScriptCode() {
